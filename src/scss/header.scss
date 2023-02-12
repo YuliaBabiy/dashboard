@@ -1,0 +1,85 @@
+header {
+  @extend %flex-center;
+  justify-content: space-between;
+  -webkit-box-shadow: 0px 6px 22px -5px rgba(173, 173, 173, 1);
+  -moz-box-shadow: 0px 6px 22px -5px rgba(173, 173, 173, 1);
+  box-shadow: 0px 6px 22px -5px rgba(173, 173, 173, 1);
+
+  %background-ikons {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(215, 236, 255);
+  }
+
+  .header__container {
+    @extend %flex-center;
+    padding: 3px;
+  }
+
+  .logo {
+    width: 140px;
+
+  }
+
+  .burger {
+    width: 18px;
+    margin-right: 10px;
+  }
+
+  .lupa {
+    @extend %background-ikons;
+  }
+
+  .dropdown-menu {
+    @extend %font-Montserrat;
+    @extend %flex-center;
+    gap: 10px;
+    font-size: 10px;
+    font-weight: 200;
+
+    &__container {
+      @extend %flex-center;
+      gap: 5px;
+      white-space: nowrap;
+    }
+
+    &__settings {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      color: white;
+      background-color:#d73c3c;
+      text-align: center;
+      padding-right: 1px;
+      padding-top: 0.7px;
+      font-weight: 700;
+    }
+  }
+
+  .chevron {
+    font-size: 8px;
+    color: gray;
+  }
+
+  .icons-list {
+    @extend %flex-center;
+
+    &__container {
+      @extend %background-ikons;
+    }
+  }
+
+  .br {
+    height: 20px;
+    width: 1px;
+    background-color: rgb(223, 219, 219);
+    padding: 2px 0;
+    margin: 0 10px;
+
+  }
+
+  .profile-menu {
+    @extend %flex-center;
+  }
+}
