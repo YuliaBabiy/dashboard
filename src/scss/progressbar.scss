@@ -1,0 +1,22 @@
+
+.circle-progress {
+  position: relative;
+  width: 30px;
+  height: 30px;
+
+  &.big {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.progress-line {
+  width: 100%;
+  height: 4px;
+}
+
+
+
+
+
+

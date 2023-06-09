@@ -1,11 +1,25 @@
 @import "./nullstyle.scss";
 @import "./header.scss";
+@import "./sidebar.scss";
+@import "./card.scss";
+@import "./progressbar.scss";
+@import "./graph.scss";
 @import "../../node_modules/@glidejs/glide/src/assets/sass/glide.core";
 // @import "../../node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 
 @font-face {
   font-family: Montserrat-Regular;
   src: url("../../public/font/Montserrat-Regular.woff") format('woff');
+}
+
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url("../../public/font/Montserrat-Medium.woff") format('woff');
+}
+
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url("../../public/font/Montserrat-ExtraBold.woff") format('woff');
 }
 
 %flex-center {
@@ -16,3 +30,128 @@
 %font-Montserrat {
   font-family: Montserrat-Regular;
 }
+
+%color-light-grey {
+  color: #959191;
+}
+
+body {
+  font-family: Montserrat-Regular;
+  font-size: 10px;
+  font-weight: 200;
+}
+
+.container {
+  display: flex;
+}
+
+.main {
+  background-color: #f3f5f9;
+  width: 100%;
+  padding: 20px;
+
+  .content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .title {
+    margin-bottom: 5px;
+
+    img {
+      display: inline;
+      height: 13px;
+      width: 13px;
+    }
+
+    h1 {
+      display: inline;
+      font-size: 12px;
+      font-family: Montserrat-Medium;
+    }
+  }
+
+  .title-nav {
+    img {
+      display: inline;
+      height: 9px;
+      width: 9px;
+    }
+
+    span {
+      margin: 0 2px;
+    }
+  }
+
+  .title-active {
+    color: #757070;
+  }
+
+  .select-section {
+    #select {
+      height: 24px;
+      margin-right: 5px;
+      font-family: Montserrat-Regular;
+      font-size: 11px;
+      cursor: pointer;
+    }
+
+    button {
+      width: 30px;
+      height: 22px;
+      padding: 2px;
+      background-color: black;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    &__img {
+      width: 19px;
+      height: 9px;
+      transform: rotate(180deg);
+      margin: 0 auto;
+    }
+  }
+
+  .dashboard-example {
+    padding: 10px;
+    background-color: #cbe8ff;
+    font-size: 9px;
+    color: #182753;
+    margin-bottom: 20px;
+
+    .question-icon {
+      display: inline-block;
+      padding: 2px;
+      border-radius: 50%;
+      background: #7b9cb8;
+      width: 15px;
+      height: 15px;
+      color: white;
+      text-align: center;
+      margin-right: 2px;
+    }
+  }
+
+  .target-section {
+    font-size: 11px;
+    margin-bottom: 20px;
+    font-family: Montserrat-Regular;
+  }
+}
+
+.canvas-container {
+  height: calc(100% - 42.5px);
+  position: relative;
+  padding: 5px;
+}
+#chart {
+  height: 30px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+

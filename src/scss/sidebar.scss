@@ -1,0 +1,77 @@
+.sidebar {
+  width: 200px;
+  margin-left: -200px;
+  height: calc(100vh - 36px);
+  padding: 10px;
+  overflow-y: scroll;
+  background: #fff;
+  z-index: 100;
+  transition: 0.3s ease-out;
+
+  &.expanded {
+    margin-left: 0;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: #147ad9;
+    font-family: Montserrat-Bold;
+    margin: 8px 0;
+  }
+
+  &__item-title {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  &__svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    display: inline;
+  }
+
+  .chevron {
+    position: absolute;
+    right: 10px;
+    color: #757070;
+  }
+  
+  &__list {
+    border-left: 2px solid cornflowerblue;
+    margin-left: 9px;
+    ul {
+      margin-left: 0;
+    }
+  }
+
+  &__item {
+    padding: 5px;
+    padding-left: 25px;
+    color: #757070;
+    cursor: pointer;
+  }
+
+}
+
+.margin-top {
+  margin-top: 5px;
+}
+
+.chevron {
+  transition: 0.15s ease-out;
+}
+
+details[open] {
+  & > summary .chevron {
+    transform: rotate(180deg);
+  }
+}
+
+details summary::-webkit-details-marker,
+details summary::marker {
+ display: none;
+ content: "";
+}

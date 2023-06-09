@@ -4,6 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="dashboard">
+  <meta name="keywords" content="dashboard, graph">
+  <meta name="author" content="Yulia Babiy">
+  <link rel="shortcut icon" type="image/ico" href="./img/dashboard.ico">
   <script src="https://kit.fontawesome.com/778a5fe3b3.js" crossorigin="anonymous"></script>
   <title>Dashboard</title>
 </head>
@@ -12,27 +16,36 @@
   <header>
     <div class="header__container">
       <div class="logo">
-        <p>Architect</p>
+        <img src="./img/logo.png" alt="">
       </div>
-      <div class="burger">
-        <img src="./img/svg/burger.svg" alt="burger">
+      <div class="burger pointer" id="sidebar-toggle">
+        <img src="./img/menu.svg" alt="burger">
       </div>
-      <div class="lupa">
-        <img src="" alt="">
+      <div class="lupa pointer">
+        <img src="./img/magnifyer.svg" alt="">
       </div>
       <div class="dropdown-menu">
-        <div class="dropdown-menu__container">
-          <img src="" alt="">
-          <p>Mega menu</p>
-          <i class="fa-solid fa-chevron-down chevron"></i>
-        </div>
-        <div class="dropdown-menu__container">
+        <details>
+          <summary>
+            <div class="dropdown-menu__container pointer">
+              <img src="./img/present.svg" alt="">
+              <p>Mega menu</p>
+              <i class="fa-solid fa-chevron-down chevron"></i>
+            </div>
+          </summary>
+          <ul class="dropdown">
+            <li class="sidebar__item">List 1</li>
+            <li class="sidebar__item">List 2</li>
+          </ul>
+
+        </details>
+        <div class="dropdown-menu__container pointer">
           <div class="dropdown-menu__settings">4</div>
           <p>Settings</p>
           <i class="fa-solid fa-chevron-down chevron"></i>
         </div>
-        <div class="dropdown-menu__container">
-          <img src="" alt="">
+        <div class="dropdown-menu__container pointer">
+          <img src="./img/setting.svg" alt="">
           <p>Projects</p>
           <i class="fa-solid fa-chevron-down chevron"></i>
         </div>
@@ -40,80 +53,639 @@
     </div>
     <div class="header__container">
       <div class="icons-list">
-        <div class="icons-list__container">
-          <img src="" alt="">
+        <div class="icons-list__container pointer">
+          <img src="./img/block-setting.svg" alt="">
         </div>
-        <div class="icons-list__container">
-          <img src="" alt="">
+        <div class="icons-list__container pointer" id="bg-red">
+          <img src="./img/bell.svg" alt="">
         </div>
-        <div class="icons-list__container">
-          <img src="" alt="">
+        <div class="icons-list__container pointer" id="bg-gray">
+          <img src="./img/language.svg" alt="">
         </div>
-        <div class="icons-list__container">
-          <img src="" alt="">
+        <div class="icons-list__container pointer" id="bg-green">
+          <img class="icon-img" src="./img/image.svg" alt="">
         </div>
       </div>
       <div class="br"></div>
-      <div class="profile-menu">
-        <img src="" alt="">
+      <div class="profile-menu pointer">
+        <img class="profile-menu__avatar" src="./img/person.svg" alt="">
         <i class="fa-solid fa-chevron-down chevron"></i>
-        <div>
-          <h1></h1>
-          <p></p>
+        <div class="profile-menu__info">
+          <h1 class="profile-menu__name">Alina Mclourd</h1>
+          <p>VP People manager</p>
         </div>
-        <img src="" alt="">
+        <div class="profile-menu__calendar">
+          <img src="./img/calendar.svg" alt="">
+        </div>
       </div>
       <div class="br"></div>
-      <div class="burger">
-        <img src="./img/svg/burger.svg" alt="burger">
+      <div class="burger pointer">
+        <img src="./img/menu.svg" alt="burger">
       </div>
     </div>
   </header>
 
-  <nav class="sidebar">
-    <ul>
-      <li></li>
-      <li></li>
-    </ul>
-  </nav>
+  <div class="container">
+    <nav class="sidebar expanded" id="sidebar">
 
-  <main>
-    <div class="content-header">
-      <div class="title"></div>
-      <div class="select-section"></div>
-    </div>
+      <div class="sidebar__title">Menu</div>
 
-    <div class="dashboard-example"></div>
+      <details>
+        <summary>
+          <div class="sidebar__item-title expanded">
+            <img class="sidebar__svg" src="./img/rocket-icon.svg" alt="">
+            <div class="sidebar__el">Dashboard</div>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+          </div>
+        </summary>
+        <ul class="sidebar__list">
+          <li class="sidebar__item">Analytiks</li>
+          <li class="sidebar__item">Commerce</li>
+          <li class="sidebar__item">Sales</li>
+          <details>
+            <summary>
+              <div class="sidebar__item-title">
+                <div class="sidebar__item">Minimal</div>
+                <i class="fa-solid fa-chevron-down chevron"></i>
+              </div>
+            </summary>
+            <ul>
+              <li class="sidebar__item">
+                <ul class="sidebar__list">
+                  <li class="sidebar__item">Variation 1</li>
+                  <li class="sidebar__item">Variation 2</li>
+                </ul>
+              </li>
+            </ul>
+          </details>
+          <li class="sidebar__item">CRM</li>
+        </ul>
+      </details>
+      <details>
+        <summary>
+          <div class="sidebar__item-title margin-top">
+            <img class="sidebar__svg" src="./img/application.svg" alt="">
+            <div class="sidebar__el">Applications</div>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+          </div>
+        </summary>
+        <ul class="sidebar__list">
+          <li class="sidebar__item">List 1</li>
+          <li class="sidebar__item">List 2</li>
+          <li class="sidebar__item">List 3</li>
+          <details>
+            <summary>
+              <div class="sidebar__item-title">
+                <div class="sidebar__item">List 4</div>
+                <i class="fa-solid fa-chevron-down chevron"></i>
+              </div>
+            </summary>
+            <ul>
+              <li class="sidebar__item">
+                <ul class="sidebar__list">
+                  <li class="sidebar__item">Variation 1</li>
+                  <li class="sidebar__item">Variation 2</li>
+                </ul>
+              </li>
+            </ul>
+          </details>
+          <li class="sidebar__item">List 5</li>
+        </ul>
+      </details>
 
-    <div class="card-section-1">
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-    </div>
+      <div class="sidebar__title">UI Components</div>
 
-    <div class="graph-section">
-      <div class="graph"></div>
-      <div class="graph-precent"></div>
-    </div>
+      <details>
+        <summary>
+          <div class="sidebar__item-title margin-top">
+            <img class="sidebar__svg" src="./img/diamond.svg" alt="">
+            <div class="sidebar__el">Elements</div>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+          </div>
+        </summary>
+        <ul class="sidebar__list">
+          <li class="sidebar__item">Analytiks</li>
+          <li class="sidebar__item">Commerce</li>
+          <li class="sidebar__item">Sales</li>
+          <details>
+            <summary>
+              <div class="sidebar__item-title">
+                <div class="sidebar__item">Minimal</div>
+                <i class="fa-solid fa-chevron-down chevron"></i>
+              </div>
+            </summary>
+            <ul>
+              <li class="sidebar__item">
+                <ul class="sidebar__list">
+                  <li class="sidebar__item">Variation 1</li>
+                  <li class="sidebar__item">Variation 2</li>
+                </ul>
+              </li>
+            </ul>
+          </details>
+          <li class="sidebar__item">CRM</li>
+        </ul>
+      </details>
 
-    <div class="card-section-2">
-      <div class="card-2"></div>
-      <div class="card-2"></div>
-      <div class="card-2"></div>
-      <div class="card-2"></div>
-    </div>
+      <details>
+        <summary>
+          <div class="sidebar__item-title margin-top">
+            <img class="sidebar__svg" src="./img/components.svg" alt="">
+            <div class="sidebar__el">Components</div>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+          </div>
+        </summary>
+        <ul class="sidebar__list">
+          <li class="sidebar__item">Analytiks</li>
+          <details>
+            <summary>
+              <div class="sidebar__item-title">
+                <div class="sidebar__item">List</div>
+                <i class="fa-solid fa-chevron-down chevron"></i>
+              </div>
+            </summary>
+            <ul>
+              <li class="sidebar__item">
+                <ul class="sidebar__list">
+                  <li class="sidebar__item">List 1</li>
+                  <li class="sidebar__item">List 2</li>
+                </ul>
+              </li>
+            </ul>
+          </details>
+          <li class="sidebar__item">Commerce</li>
+          <li class="sidebar__item">Sales</li>
+          <details>
+            <summary>
+              <div class="sidebar__item-title">
+                <div class="sidebar__item">Minimal</div>
+                <i class="fa-solid fa-chevron-down chevron"></i>
+              </div>
+            </summary>
+            <ul>
+              <li class="sidebar__item">
+                <ul class="sidebar__list">
+                  <li class="sidebar__item">Variation 1</li>
+                  <li class="sidebar__item">Variation 2</li>
+                </ul>
+              </li>
+            </ul>
+          </details>
+          <li class="sidebar__item">CRM</li>
+        </ul>
+      </details>
 
-    <div class="target-section"></div>
+      <details>
+        <summary>
+          <div class="sidebar__item-title margin-top">
+            <img class="sidebar__svg" src="./img/tables.svg" alt="">
+            <div class="sidebar__el">Tables</div>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+          </div>
+        </summary>
+        <ul class="sidebar__list">
+          <li class="sidebar__item">Analytiks</li>
+          <li class="sidebar__item">Commerce</li>
+          <li class="sidebar__item">Sales</li>
+          <details>
+            <summary>
+              <div class="sidebar__item-title">
+                <div class="sidebar__item">Minimal</div>
+                <i class="fa-solid fa-chevron-down chevron"></i>
+              </div>
+            </summary>
+            <ul>
+              <li class="sidebar__item">
+                <ul class="sidebar__list">
+                  <li class="sidebar__item">Variation 1</li>
+                  <li class="sidebar__item">Variation 2</li>
+                </ul>
+              </li>
+            </ul>
+          </details>
+          <li class="sidebar__item">CRM</li>
+        </ul>
+      </details>
 
-    <div class="card-section-3">
-      <div class="card-3"></div>
-      <div class="card-3"></div>
-      <div class="card-3"></div>
-      <div class="card-3"></div>
-    </div>
 
-  </main>
+      <div class="sidebar__title">Dashboard Widgets</div>
+      <ul>
+        <li class="margin-top">
+          <div class="sidebar__item-title">
+            <img class="sidebar__svg" src="./img/chart-1.svg" alt="">
+            <div class="sidebar__el">Chart Boxes 1</div>
+          </div>
+        </li>
+        <li class="margin-top">
+          <div class="sidebar__item-title">
+            <img class="sidebar__svg" src="./img/chart-2.svg" alt="">
+            <div class="sidebar__el">Chart Boxes 2</div>
+          </div>
+        </li>
+        <li class="margin-top">
+          <div class="sidebar__item-title">
+            <img class="sidebar__svg" src="./img/application.svg" alt="">
+            <div class="sidebar__el">Chart Boxes 3</div>
+          </div>
+        </li>
+        <li class="margin-top">
+          <div class="sidebar__item-title">
+            <img class="sidebar__svg" src="./img/profile_icon.svg" alt="">
+            <div class="sidebar__el">Profile Boxes </div>
+          </div>
+        </li>
+      </ul>
+
+      <div class="sidebar__title">Forms</div>
+
+      <details>
+        <summary>
+          <div class="sidebar__item-title margin-top">
+            <img class="sidebar__svg" src="./img/bulb-icon.svg" alt="">
+            <div class="sidebar__el">Elements</div>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+          </div>
+        </summary>
+        <ul class="sidebar__list">
+          <li class="sidebar__item">Analytiks</li>
+          <li class="sidebar__item">Commerce</li>
+          <li class="sidebar__item">Sales</li>
+          <details>
+            <summary>
+              <div class="sidebar__item-title">
+                <div class="sidebar__item">Minimal</div>
+                <i class="fa-solid fa-chevron-down chevron"></i>
+              </div>
+            </summary>
+            <ul>
+              <li class="sidebar__item">
+                <ul class="sidebar__list">
+                  <li class="sidebar__item">Variation 1</li>
+                  <li class="sidebar__item">Variation 2</li>
+                </ul>
+              </li>
+            </ul>
+          </details>
+          <li class="sidebar__item">CRM</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>
+          <div class="sidebar__item-title margin-top">
+            <img class="sidebar__svg" src="./img/widget.svg" alt="">
+            <div class="sidebar__el">Widgets</div>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+          </div>
+        </summary>
+        <ul class="sidebar__list">
+          <li class="sidebar__item">Analytiks</li>
+          <li class="sidebar__item">Commerce</li>
+          <li class="sidebar__item">Sales</li>
+          <details>
+            <summary>
+              <div class="sidebar__item-title">
+                <div class="sidebar__item">Minimal</div>
+                <i class="fa-solid fa-chevron-down chevron"></i>
+              </div>
+            </summary>
+            <ul>
+              <li class="sidebar__item">
+                <ul class="sidebar__list">
+                  <li class="sidebar__item">Variation 1</li>
+                  <li class="sidebar__item">Variation 2</li>
+                </ul>
+              </li>
+            </ul>
+          </details>
+          <li class="sidebar__item">CRM</li>
+        </ul>
+      </details>
+
+      <div class="sidebar__title">Charts</div>
+
+      <details>
+        <summary>
+          <div class="sidebar__item-title margin-top">
+            <img class="sidebar__svg" src="./img/graph_up.svg" alt="">
+            <div class="sidebar__el">ChartJS</div>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+          </div>
+        </summary>
+        <ul class="sidebar__list">
+          <li class="sidebar__item">Analytiks</li>
+          <li class="sidebar__item">Commerce</li>
+          <li class="sidebar__item">Sales</li>
+          <details>
+            <summary>
+              <div class="sidebar__item-title">
+                <div class="sidebar__item">Minimal</div>
+                <i class="fa-solid fa-chevron-down chevron"></i>
+              </div>
+            </summary>
+            <ul>
+              <li class="sidebar__item">
+                <ul class="sidebar__list">
+                  <li class="sidebar__item">Variation 1</li>
+                  <li class="sidebar__item">Variation 2</li>
+                </ul>
+              </li>
+            </ul>
+          </details>
+          <li class="sidebar__item">CRM</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>
+          <div class="sidebar__item-title margin-top">
+            <img class="sidebar__svg" src="./img/clipboard.svg" alt="">
+            <div class="sidebar__el">Aplex Chart</div>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+          </div>
+        </summary>
+        <ul class="sidebar__list">
+          <li class="sidebar__item">Analytiks</li>
+          <li class="sidebar__item">Commerce</li>
+          <li class="sidebar__item">Sales</li>
+          <details>
+            <summary>
+              <div class="sidebar__item-title">
+                <div class="sidebar__item">Minimal</div>
+                <i class="fa-solid fa-chevron-down chevron"></i>
+              </div>
+            </summary>
+            <ul>
+              <li class="sidebar__item">
+                <ul class="sidebar__list">
+                  <li class="sidebar__item">Variation 1</li>
+                  <li class="sidebar__item">Variation 2</li>
+                </ul>
+              </li>
+            </ul>
+          </details>
+          <li class="sidebar__item">CRM</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>
+          <div class="sidebar__item-title margin-top">
+            <img class="sidebar__svg" src="./img/arrow.svg" alt="">
+            <div class="sidebar__el">Chart Sparklines</div>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+          </div>
+        </summary>
+        <ul class="sidebar__list">
+          <li class="sidebar__item">Analytiks</li>
+          <li class="sidebar__item">Commerce</li>
+          <li class="sidebar__item">Sales</li>
+          <details>
+            <summary>
+              <div class="sidebar__item-title">
+                <div class="sidebar__item">Minimal</div>
+                <i class="fa-solid fa-chevron-down chevron"></i>
+              </div>
+            </summary>
+            <ul>
+              <li class="sidebar__item">
+                <ul class="sidebar__list">
+                  <li class="sidebar__item">Variation 1</li>
+                  <li class="sidebar__item">Variation 2</li>
+                </ul>
+              </li>
+            </ul>
+          </details>
+          <li class="sidebar__item">CRM</li>
+        </ul>
+      </details>
+    </nav>
+
+    <main class="main">
+      <div class="content-header">
+        <div>
+          <div class="title">
+            <img src="./img/building.svg" alt="Dashboard">
+            <h1>Minimal Dashboard</h1>
+          </div>
+          <div class="title-nav">
+            <img src="./img/home.svg" alt="home">
+            <span>/</span>
+            <span>Dashboards</span>
+            <span>/</span>
+            <span class="title-active" >Minimal Dashboard Example</span>
+          </div>
+        </div>
+        <div class="select-section">
+          <select name="select" id="select">
+            <option value="value 1">select period</option>
+            <option value="value 2">select period</option>
+          </select>
+          <button>
+            <img class="select-section__img" src="./img/button.svg" alt="">
+          </button>
+        </div>
+      </div>
+
+      <div class="dashboard-example">
+        <p>
+          <span class="question-icon">?</span>
+          This dashboard example was created using only the available elements and components,
+          no additional SCSS was writen!
+        </p>
+      </div>
+
+      <div class="card-section">
+        <div class="card-section__container">
+          <div class="card blue">
+            <h1>New Accounts</h1>
+            <div class="card__container">
+              <div>
+                <i class="fa-solid fa-chevron-down card__chevron"></i>
+                <span class="card__number">234 <span class="card__percent">%</span></span>
+              </div>
+              <div id="progress-1" class="circle-progress"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-section__container">
+          <div class="card red">
+            <h1>Total Expenses</h1>
+            <div class="card__container">
+              <div>
+                <i class="fa-solid fa-chevron-down card__chevron"></i>
+                <span class="card__number">71 <span class="card__percent">%</span></span>
+              </div>
+              <div id="progress-2" class="circle-progress"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-section__container">
+          <div class="card yellow">
+            <h1>Company Value</h1>
+            <div class="card__container">
+              <div>
+                <span class="card__dollar">$</span>
+                <span class="card__number">145M</span>
+              </div>
+              <div id="progress-3" class="circle-progress"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-section__container">
+          <div class="card green">
+            <h1>New Employees</h1>
+            <div class="card__container">
+              <div>
+                <span class="card__chevron">+</span>
+                <span class="card__number">234 <span class="card__percent">%</span></span>
+              </div>
+              <div id="progress-4" class="circle-progress"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="graph-section">
+        <div class="graph graph-1">
+          <div class="graph__title">
+            <h1>Traffic Sources</h1>
+            <button class="graph-1__button">Actions</button>
+          </div>
+          <div class="canvas-container">
+            <canvas id="chart"></canvas>
+          </div>
+        </div>
+        <div class="graph graph-percent">
+          <div class="graph__title">
+            <h1>Income</h1>
+            <button>
+              <img class="graph-percent__img" src="./img/setting.svg" alt="setting">
+            </button>
+          </div>
+          <div class="graph-percent__circle">
+            <div id="progress-5" class="circle-progress big"></div>
+          </div>
+          <div class="card-section section-3">
+            <div class="card-section__container">
+              <div class="card yellow">
+                <div class="card__container">
+                  <span class="card__number">32%</span>
+                  <div id="progressLine-5" class="progress-line"></div>
+                </div>
+                <h1>Spendings Target</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-section section-2">
+        <div class="card-section__container">
+          <div class="card green">
+            <h1>Income</h1>
+            <div class="card__container">
+              <div>
+                <span class="card__dollar">$</span>
+                <span class="card__number">5,456</span>
+              </div>
+              <div class="card__total-percent">+14%</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-section__container">
+          <div class="card red">
+            <h1>Expenses</h1>
+            <div class="card__container">
+              <div>
+                <span class="card__dollar">$</span>
+                <span class="card__number">4,764</span>
+              </div>
+              <div class="card__total-percent">+8%</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-section__container">
+          <div class="card green">
+            <h1>Spendings</h1>
+            <div class="card__container">
+              <div>
+                <i class="fa-solid fa-chevron-down card__chevron"></i>
+                <span class="card__dollar">$</span>
+                <span class="card__number">1,5M</span>
+              </div>
+              <div class="card__total-percent">+15%</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-section__container">
+          <div class="card yellow">
+            <h1>Total</h1>
+            <div class="card__container">
+              <div>
+                <span class="card__dollar">$</span>
+                <span class="card__number">31,564</span>
+              </div>
+              <div class="card__total-percent">+76%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="target-section">
+        <h1>Target Section</h1>
+      </div>
+
+      <div class="card-section section-3">
+        <div class="card-section__container">
+          <div class="card red">
+            <div class="card__container">
+              <span class="card__number">71%</span>
+              <div id="progressLine-1" class="progress-line"></div>
+            </div>
+            <h1>Income</h1>
+          </div>
+        </div>
+
+        <div class="card-section__container">
+          <div class="card green">
+            <div class="card__container">
+              <span class="card__number">54%</span>
+              <div id="progressLine-2" class="progress-line"></div>
+            </div>
+            <h1>Expenses Target</h1>
+          </div>
+        </div>
+
+        <div class="card-section__container">
+          <div class="card yellow">
+            <div class="card__container">
+              <span class="card__number">32%</span>
+              <div id="progressLine-3" class="progress-line"></div>
+            </div>
+            <h1>Spendings Target</h1>
+          </div>
+        </div>
+
+        <div class="card-section__container">
+          <div class="card blue">
+            <div class="card__container">
+              <span class="card__number">89%</span>
+              <div id="progressLine-4" class="progress-line"></div>
+            </div>
+            <h1>Total Target</h1>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
 
   <script type="module" src="./js/main.js"></script>
 </body>
